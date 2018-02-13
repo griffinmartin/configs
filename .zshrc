@@ -9,6 +9,13 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#NPM_PACKAGES="${HOME}/.npm-packages"
+#PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Set correct path for NPM. Required for live-server
+export PATH=$PATH:/Users/griffinmartin/.npm-global/bin
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -86,3 +93,11 @@ source $ZSH/oh-my-zsh.sh
 
 # redefine prompt_context for hiding user@hostname
 prompt_context () { }
+eval $(/usr/libexec/path_helper -s)
+source /Users/griffinmartin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export NVM_DIR="/Users/griffinmartin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export ANDROID_HOME=~/Library/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform_tools
