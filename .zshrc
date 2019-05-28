@@ -1,4 +1,3 @@
-
 # oh-my-zsh path
 export ZSH=$HOME/.oh-my-zsh
 
@@ -27,17 +26,41 @@ COMPLETION_WAITING_DOTS="true"
 # Plugins:
 plugins=(
     git
-    zsh-syntax-highliting 
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/fs_rsa"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# redefine prompt_context for hiding user@hostname
+# Redefine prompt_context for hiding user@hostname
 prompt_context () { }
+
+# React Native debug editor
+REACT_EDITOR=code
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 # Set ENV for $ANDROID_HOME
 export ANDROID_HOME=~/Library/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform_tools
+export ANDROID_SDK_ROOT=~/Library/Android/Sdk
+export ANDROID_NDK_ROOT=/Users/gmartin/Library/Android/sdk/ndk-bundle
+
+# Set ENV for Flutter
+export PATH="/usr/local/opt/flutter/bin:$PATH"
+
+# Go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GO111MODULE=on
+export GIT_TERMINAL_PROMPT=1
+
+# Elixir
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Aliases
+#alias ls='lsd'
