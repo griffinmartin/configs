@@ -94,8 +94,10 @@ let g:lightline = { 'colorscheme': 'material_vim' }
 let g:material_terminal_italics = 1
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists(“s:std_in”) | NERDTree | endif
+autocmd VimEnter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " hidden files
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
