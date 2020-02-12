@@ -43,6 +43,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'dense-analysis/ale'
+Plug 'tpope/vim-fugitive' "git wrapper
 "Autocomplete
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'

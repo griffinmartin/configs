@@ -62,5 +62,10 @@ export GIT_TERMINAL_PROMPT=1
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Editor
+export EDITOR=nvim
+
 # Aliases
 #alias ls='lsd'
+alias v="nvim"
+alias vimdiff="nvim -f -c \'Gdiffsplit!\' \'$MERGED\'"
