@@ -91,7 +91,6 @@ let g:lightline = { 'colorscheme': 'palenight' }
 let g:palenight_terminal_italics=1
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " hidden files
 let NERDTreeMinimalUI = 1
