@@ -42,6 +42,7 @@ Plug 'wsdjeg/dein-ui.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
+Plug 'dense-analysis/ale'
 "Autocomplete
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
@@ -106,3 +107,6 @@ nmap ga <Plug>(EasyAlign)
 autocmd BufEnter * call ncm2#enable_for_buffer()
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
+
+" ale - linting
+let g:ale_fix_on_save = 1
