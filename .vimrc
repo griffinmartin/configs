@@ -56,6 +56,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color' " CSS Vim color preview
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Language-Specific (alphabetical by package-identifier)
+Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim' " nginx configs
 Plug 'fatih/vim-go' " golang config
 Plug 'mxw/vim-jsx' " JSX highlighter (depends on underlying JS highlighter)
