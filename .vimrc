@@ -61,6 +61,7 @@ Plug 'chr4/nginx.vim' " nginx configs
 Plug 'fatih/vim-go' " golang config
 Plug 'mxw/vim-jsx' " JSX highlighter (depends on underlying JS highlighter)
 Plug 'pangloss/vim-javascript' " JS highlighter ('official' dependency of vim-jsx) 
+Plug 'rust-lang/rust.vim'
 " Initialize plugin system
 call plug#end()
 
