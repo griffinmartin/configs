@@ -50,6 +50,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'mhartington/nvim-typescript'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-go'
+Plug 'ncm2/ncm2-racer'
 "Visuals
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
