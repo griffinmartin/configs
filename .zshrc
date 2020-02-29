@@ -52,6 +52,9 @@ export ANDROID_NDK_ROOT=/Users/gmartin/Library/Android/sdk/ndk-bundle
 # Set ENV for Flutter
 export PATH="/usr/local/opt/flutter/bin:$PATH"
 
+# Rust
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
 # Go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
