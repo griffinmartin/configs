@@ -116,3 +116,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " ale - linting
 let g:ale_fix_on_save = 1
+
+" rustfmt - linting
+let g:rustfmt_autosave = 1
