@@ -14,6 +14,9 @@ POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 
+# 256 colors
+export TERM="xterm-256color"
+
 # Set correct path for NPM. Required for live-server
 export PATH=$PATH:/Users/griffinmartin/.npm-global/bin
 
