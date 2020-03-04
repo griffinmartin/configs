@@ -68,6 +68,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export EDITOR=nvim
 
 # Aliases
+alias k="kak"
 alias v="nvim"
 alias vimdiff="nvim -f -c \'Gdiffsplit!\' \'$MERGED\'"
 alias tmux="tmux -2"
