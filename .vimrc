@@ -35,6 +35,7 @@ set smartcase
 set relativenumber
 set background=dark
 
+
 call plug#begin('~/.nvim/autoload')
 "Functionality
 Plug 'scrooloose/nerdtree' 
