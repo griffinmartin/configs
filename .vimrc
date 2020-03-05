@@ -45,6 +45,7 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive' "git wrapper
+Plug 'christoomey/vim-tmux-navigator'
 "Autocomplete
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
