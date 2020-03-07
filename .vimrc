@@ -1,5 +1,5 @@
 set nocompatible
-set encoding=utf-8
+set encoding=UTF-8
 set ruler
 set laststatus=2
 set number
@@ -58,6 +58,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color' " CSS Vim color preview
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'ryanoasis/vim-devicons'
 "Language-Specific (alphabetical by package-identifier)
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim' " nginx configs
