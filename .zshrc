@@ -70,5 +70,6 @@ export EDITOR=nvim
 # Aliases
 alias k="kak"
 alias v="nvim"
+alias c="clear"
 alias vimdiff="nvim -f -c \'Gdiffsplit!\' \'$MERGED\'"
 alias tmux="tmux -2"
