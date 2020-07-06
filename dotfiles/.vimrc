@@ -43,9 +43,19 @@ Plug 'wsdjeg/dein-ui.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-Plug 'dense-analysis/ale'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive' "git wrapper
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
+Plug 'liuchengxu/vim-clap'
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'liuchengxu/vim-better-default'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "Autocomplete
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
@@ -53,7 +63,10 @@ Plug 'mhartington/nvim-typescript'
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-racer'
+Plug 'Shougo/deoplete.nvim'
+Plug 'ncm2/float-preview.nvim'
 "Visuals
+Plug 'flazz/vim-colorschemes'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color' " CSS Vim color preview
@@ -66,7 +79,8 @@ Plug 'fatih/vim-go' " golang config
 Plug 'mxw/vim-jsx' " JSX highlighter (depends on underlying JS highlighter)
 Plug 'pangloss/vim-javascript' " JS highlighter ('official' dependency of vim-jsx) 
 Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-fireplace'
+Plug 'Olical/conjure', {'tag': 'v4.0.0'}
+Plug 'clojure-vim/vim-jack-in'
 " Initialize plugin system
 call plug#end()
 
@@ -118,8 +132,30 @@ set completeopt=noinsert,menuone,noselect
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+" terminal mode escape rema
+tnoremap <Esc> <C-\><C-n>:q!<CR>
+
+" fuzzy search Fzf
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" float
+let g:float_preview#docked = 0
+let g:float_preview#max_width = 80
+let g:float_preview#max_height = 40
+
+"clap
+let g:clap_provider_grep_delay = 50
+let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g "!.git/"'
+
 " ale - linting
 let g:ale_fix_on_save = 1
+let g:ale_linters = {
+      \ 'clojure': ['clj-kondo', 'joker']
+      \}
 
 " rustfmt - linting
 let g:rustfmt_autosave = 1
