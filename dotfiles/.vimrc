@@ -20,7 +20,6 @@ set expandtab
 set smarttab
 set splitbelow splitright "Pane splitting
 set noshowmode "The status line will show the mode.
-set nowrap
 set nrformats-=octal
 set scrolloff=1
 set sidescrolloff=5
@@ -34,6 +33,7 @@ set ignorecase
 set smartcase
 set relativenumber
 set background=dark
+set wrap linebreak
 
 
 call plug#begin('~/.nvim/autoload')
@@ -67,11 +67,12 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'ncm2/float-preview.nvim'
 "Visuals
 Plug 'flazz/vim-colorschemes'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color' " CSS Vim color preview
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'luochen1990/rainbow'
 "Language-Specific (alphabetical by package-identifier)
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim' " nginx configs
@@ -79,6 +80,7 @@ Plug 'fatih/vim-go' " golang config
 Plug 'mxw/vim-jsx' " JSX highlighter (depends on underlying JS highlighter)
 Plug 'pangloss/vim-javascript' " JS highlighter ('official' dependency of vim-jsx) 
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer' " rust code completion
 Plug 'Olical/conjure', {'tag': 'v4.0.0'}
 Plug 'clojure-vim/vim-jack-in'
 " Initialize plugin system
@@ -105,11 +107,15 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme palenight
+colorscheme onedark
 
-let g:airline_theme = "palenight"
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:palenight_terminal_italics=1
+let g:onedark_termcolors = 256
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_terminal_italics = 1
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+let g:airline_theme='onedark'
 
 autocmd StdinReadPre * let s:std_in=1
 map <C-n> :NERDTreeToggle<CR>
@@ -139,6 +145,9 @@ tnoremap <Esc> <C-\><C-n>:q!<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 
+" paren color
+let g:rainbow_active = 1 
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
@@ -159,3 +168,4 @@ let g:ale_linters = {
 
 " rustfmt - linting
 let g:rustfmt_autosave = 1
+let g:racer_cmd = "/home/user/.cargo/bin/racer"

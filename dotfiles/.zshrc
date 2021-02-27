@@ -48,7 +48,7 @@ export ANDROID_NDK_ROOT=/Users/gmartin/Library/Android/sdk/ndk-bundle
 export PATH="/usr/local/opt/flutter/bin:$PATH"
 
 # Rust
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library
 
 # Go
 export GOPATH=$HOME/go
