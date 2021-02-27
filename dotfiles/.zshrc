@@ -49,6 +49,7 @@ export PATH="/usr/local/opt/flutter/bin:$PATH"
 
 # Rust
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library
+export RACER_SRC_PATH=/Users/gmartin/.cargo/bin
 
 # Go
 export GOPATH=$HOME/go

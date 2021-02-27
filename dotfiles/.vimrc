@@ -168,4 +168,4 @@ let g:ale_linters = {
 
 " rustfmt - linting
 let g:rustfmt_autosave = 1
-let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
