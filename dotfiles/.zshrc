@@ -53,10 +53,8 @@ export RACER_SRC_PATH=/Users/gmartin/.cargo/bin
 
 # Go
 export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GO111MODULE=on
-export GIT_TERMINAL_PROMPT=1
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
