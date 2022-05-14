@@ -52,9 +52,11 @@ export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library
 export RACER_SRC_PATH=/Users/gmartin/.cargo/bin
 
 # Go
+export PATH="$GOPATH/bin:$PATH"
 export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:/usr/local/go
+export GO111MODULE=on
 
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
